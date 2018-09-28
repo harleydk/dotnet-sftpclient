@@ -21,7 +21,13 @@
 
 ### Requirements
 
-Requires .NET framework 4.7 runtime or higher installed on the machine. Requires Windows OS.
+Requires .NET framework 4.7 runtime or higher installed on the machine. Requires Windows OS. 
+
+### Download
+
+Download the tool [here](./sftpclient.exe), I compiled it into a single console exe-file.
+
+(If you wish to compile the console app into a single console exe-file yourself, you can use the ILMerge tool from Microsoft for this purpose. The command-syntax i used is this, 'c:\tmp\ILMerge.exe /target:exe /targetplatform:v4,"C:\Windows\Microsoft.NET\Framework\v4.0.30319" /out:sftpclient.exe /wildcards /allowDup *.exe *.dll')
 
 ### How to use
 
@@ -100,7 +106,7 @@ I encourage issues and pull requests.
 * TODO: Support up-/download by wild-card. As is, only allows single file or entire directory.
 
 
-### Needful things
+### Let me know
 
 Let me know - by way of the issues - if you're stuck with anything. I'd like to try and help out, and make this tool better over time.
 
