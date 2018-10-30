@@ -97,20 +97,20 @@ Basically, always use keys as a second challenge, beyond what username and passw
 
  I use PuTTYGen to generate my keys:
 
- 1. Generate the keys
+ 1. Generate the keys<br>
 	![Generate the keys](PuTTYgen_generateKeys.png)
 
- 2. Wait for it...
+ 2. Wait for it...<br>
  	![Waiting](PuTTYgen_generating.png)
 
- 3. Specity a passphrase - let's go with 'wallen11', for example.
+ 3. Specity a passphrase - let's go with 'wallen11', for example.<br>
   	![Waiting](PuTTYgen_specifyPassphrase.png)
  
- 4. Save the public key - this goes to the server.
+ 4. Save the public key - this goes to the server.<br>
 	![Save the public key](PuTTYgen_savePublicKey.png)
 
  5. Save the private key - by which we can authenticate against the server. <br> 
-    IMPORTANT! SSH2 keys have no standard format. Putty's format is different than OpenSSH's format. And this tool only supports OpenSSH keys. So we'll have PuTTYgen perform an OpenSSH export.
+    IMPORTANT! SSH2 keys have no standard format. Putty's format is different than OpenSSH's format. And this tool only supports OpenSSH keys. So we'll have PuTTYgen perform an OpenSSH export.<br>
     ![export private key](PuTTYgen_exportPrivateKey.png)
 	
 
