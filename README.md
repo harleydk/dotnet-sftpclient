@@ -25,7 +25,7 @@ Requires .NET framework 4.7 runtime or higher installed on the machine. Requires
 
 ### Download
 
-Download the tool [here](./sftpclient.exe), I compiled it into a single console exe-file.
+Download the tool [here](./dotnetsftp.exe), I compiled it into a single console exe-file.
 
 (If you wish to compile the console app into a single console exe-file yourself, you can use the ILMerge tool from Microsoft for this purpose. The command-syntax i used is this, 'c:\tmp\ILMerge.exe /target:exe /targetplatform:v4,"C:\Windows\Microsoft.NET\Framework\v4.0.30319" /out:sftpclient.exe /wildcards /allowDup *.exe *.dll')
 
