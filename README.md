@@ -92,6 +92,35 @@ In the case of an SFTP-server, the server-administrator will typically generate 
 
 Basically, always use keys as a second challenge, beyond what username and password can offer.
 
+
+* How should I generate the keys?
+
+ I use PuTTYGen to generate my keys:
+
+ 1. Generate the keys
+	![Generate the keys](PuTTYgen_generateKeys.png)
+
+ 2. Wait for it...
+ 	![Waiting](PuTTYgen_generating.png)
+
+ 3. Specity a passphrase - let's go with 'wallen11', for example.
+  	![Waiting](PuTTYgen_specifyPassphrase.png)
+ 
+ 4. Save the public key - this goes to the server.
+	![Save the public key](PuTTYgen_savePublicKey.png)
+
+ 5. Save the private key - by which we can authenticate against the server. <br> 
+    IMPORTANT! SSH2 keys have no standard format. Putty's format is different than OpenSSH's format. And this tool only supports OpenSSH keys. So we'll have PuTTYgen perform an OpenSSH export.
+    ![export private key](PuTTYgen_exportPrivateKey.png)
+	
+
+ 6. Now - if the public key was correctly stored on the SFTP server - we should be able to log into the SFTP-server and authenticate by way of the keys we just generated. Note how 'password' is actually the 'passphrase', that we specified in step 3.
+
+ ```
+ dotnetsftp.exe --tt=upload --host=<your_sftp_server_host> --port=<port_no_usually_22> --username=tester --password=wallen11 --dp=/user/home --sp=c:\temp\test.txt --pk=<path_of_the_private_key_file_in_OpenSSH_format>
+  ```
+  
+
 ### Need a way to test this client? 
 
 Included in the SolutionItems folder is a free sftp-server, [RebexTinySftpServer](https://labs.rebex.net/tiny-sftp-server), that can be used with integration testing (I used it for the integration-tests for this project). It's free for commercial and non-commercial use. And supports public/private keys authentication. Highly recommend it. 
