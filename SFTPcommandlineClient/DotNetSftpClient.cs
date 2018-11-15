@@ -76,7 +76,7 @@ namespace DotNetSftp
                     #endregion guard clause
 
                     // connect using just username/private key file/password as pass-phrase:
-                    _logger.LogInformation($"Will log on with keyfile {_connectivitySettings.PrivateKeyPath}, with pass-phrase '{@_connectivitySettings.Password}'");
+                    _logger.LogInformation($"Will log on with keyfile {_connectivitySettings.PrivateKeyPath}, with the pass-phrase given.");
 
                     VerifyPrivateKeyFileIsReadable(_connectivitySettings.PrivateKeyPath);
                     VerifyPrivateKeyIsNotPuttyFormat(_connectivitySettings.PrivateKeyPath);
